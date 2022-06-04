@@ -10,7 +10,7 @@ source:
   sha256: bfd37b4942616cd9db48479ddc741b88c82fbe13ac79327ecf3d35964ae72ff4
 
 build:
-  number: 0
+  number: 1
 
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - cython
     - future
     - pkgconfig
-    - qt         # [win]
+    - qt-main         # [win]
     - qtpy       # [win]
     - pyqt       # [win]
     - vtk        # [win]
@@ -35,7 +35,7 @@ requirements:
     - hdf5
     - {{ pin_compatible('numpy') }}
     - future
-    - qt         # [win]
+    - qt-main         # [win]
     - qtpy       # [win]
     - pyqt       # [win]
     - vtk        # [win]
