@@ -1,5 +1,5 @@
 {% set name = "pyCGNS" %}
-{% set version = "6.1.4" %}
+{% set version = "6.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2caf946a536642e99f36b9f884dfc04a05ca0ba0b847c7333d780e39d40b3886
+  sha256: 7e22232e4c47df4ef67ad398bdeb897b3d31b376b90d5890ec9285672a68cbb1
 
 build:
-  number: 3
+  number: 0
 
 
 requirements:
