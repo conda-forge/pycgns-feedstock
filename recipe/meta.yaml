@@ -1,5 +1,5 @@
 {% set name = "pyCGNS" %}
-{% set version = "6.2.1" %}
+{% set version = "6.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dd2da464ec8a149b21ca6965ee8d3c285735c985df1b1259e4d98a180d757fb9
+  sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
 
 build:
   number: 0
@@ -25,20 +25,20 @@ requirements:
     - cython
     - future
     - pkgconfig
-    - qt-main         # [win]
-    - qtpy       # [win]
-    - pyqt       # [win]
-    - vtk        # [win]
+    - qt-main         # [win or osx]
+    - qtpy       # [win or osx]
+    - pyqt       # [win or osx]
+    - vtk        # [win or osx]
 
   run:
     - python
     - hdf5
     - {{ pin_compatible('numpy') }}
     - future
-    - qt-main         # [win]
-    - qtpy       # [win]
-    - pyqt       # [win]
-    - vtk        # [win]
+    - qt-main         # [win or osx]
+    - qtpy       # [win or osx]
+    - pyqt       # [win or osx]
+    - vtk        # [win or osx]
 
 test:
   imports:
