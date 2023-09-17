@@ -5,9 +5,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 hdf5:
-- 1.12.2
+- 1.14.1
 numpy:
-- '1.20'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -15,7 +15,7 @@ pin_run_as_build:
 pyqt:
 - '5.15'
 python:
-- 3.9.* *_cpython
+- 3.8.* *_cpython
 qt_main:
 - '5.15'
 target_platform:
