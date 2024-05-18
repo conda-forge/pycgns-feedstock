@@ -10,12 +10,13 @@ source:
   sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
 
 build:
-  number: 2
+  number: 3
 
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
 
   host:
     - python
@@ -33,7 +34,6 @@ requirements:
   run:
     - python
     - hdf5
-    - {{ pin_compatible('numpy') }}
     - future
     - qt-main         # [win or osx]
     - qtpy       # [win or osx]
