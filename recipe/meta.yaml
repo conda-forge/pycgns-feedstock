@@ -12,39 +12,75 @@ source:
 build:
   number: 6
 
+outputs:
+  - name: pycgns-core
+    version: {{ version }}
+    script: build.sh  # [not win]
+    script: bld.bat  # [win]
+    build:
+      skip_compile_pyc:
+        - "CGNS/APP/*.py"
+        - "CGNS/NAV/*.py"
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
 
-  host:
-    - python
-    - pip
-    - hdf5
-    - numpy
-    - cython
-    - future
-    - pkgconfig
-    - qt-main         # [win or osx]
-    - qtpy       # [win or osx]
-    - pyqt       # [win or osx]
-    - vtk        # [win or osx]
+      host:
+        - python
+        - pip
+        - hdf5
+        - numpy
+        - cython
+        - future
+        - pkgconfig
 
-  run:
-    - python
-    - hdf5
-    - future
-    - qt-main         # [win or osx]
-    - qtpy       # [win or osx]
-    - pyqt       # [win or osx]
-    - vtk        # [win or osx]
+      run:
+        - python
+        - hdf5
+        - future
 
-test:
-  imports:
-    - CGNS.MAP
-    - CGNS.PAT
-    - CGNS.VAL
+    test:
+      imports:
+        - CGNS.MAP
+        - CGNS.PAT
+        - CGNS.VAL
+
+  - name: "pycgns"
+    version: {{ version }}
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+
+      host:
+        - python
+        - pip
+        - hdf5
+        - numpy
+        - cython
+        - future
+        - pkgconfig
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+      run:
+        - python
+        - hdf5
+        - future
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+    test:
+      imports:
+        - CGNS.MAP
+        - CGNS.PAT
+        - CGNS.VAL
 
 about:
   home: https://github.com/pyCGNS/pyCGNS
