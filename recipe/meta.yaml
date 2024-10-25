@@ -13,7 +13,7 @@ build:
   number: 7
 
 outputs:
-  - name: pycgns-core
+  - name: "pycgns-core"
     version: {{ version }}
     script: build_core.sh  # [not win]
     script: bld_core.bat  # [win]
@@ -46,6 +46,9 @@ outputs:
         - CGNS.MAP
         - CGNS.PAT
         - CGNS.VAL
+
+    conflicts :
+      - pycgns
 
   - name: "pycgns"
     version: {{ version }}
@@ -81,6 +84,9 @@ outputs:
         - CGNS.MAP
         - CGNS.PAT
         - CGNS.VAL
+
+    conflicts :
+      - pycgns-core
 
 about:
   home: https://github.com/pyCGNS/pyCGNS
