@@ -48,9 +48,6 @@ outputs:
         - CGNS.PAT
         - CGNS.VAL
 
-    conflicts:
-      - pycgns
-
   - name: "pycgns"
     version: {{ version }}
     requirements:
@@ -86,9 +83,6 @@ outputs:
         - CGNS.MAP
         - CGNS.PAT
         - CGNS.VAL
-
-    conflicts:
-      - pycgns-core
 
 about:
   home: https://github.com/pyCGNS/pyCGNS
