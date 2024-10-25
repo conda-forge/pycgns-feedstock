@@ -128,6 +128,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pycgns-green.svg)](https://anaconda.org/conda-forge/pycgns) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycgns.svg)](https://anaconda.org/conda-forge/pycgns) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycgns.svg)](https://anaconda.org/conda-forge/pycgns) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycgns.svg)](https://anaconda.org/conda-forge/pycgns) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pycgns--core-green.svg)](https://anaconda.org/conda-forge/pycgns-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycgns-core.svg)](https://anaconda.org/conda-forge/pycgns-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycgns-core.svg)](https://anaconda.org/conda-forge/pycgns-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycgns-core.svg)](https://anaconda.org/conda-forge/pycgns-core) |
 
 Installing pycgns
 =================
@@ -139,16 +140,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pycgns` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pycgns, pycgns-core` can be installed with `conda`:
 
 ```
-conda install pycgns
+conda install pycgns pycgns-core
 ```
 
 or with `mamba`:
 
 ```
-mamba install pycgns
+mamba install pycgns pycgns-core
 ```
 
 It is possible to list all of the versions of `pycgns` available on your platform with `conda`:
