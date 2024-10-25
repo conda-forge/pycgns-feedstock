@@ -30,6 +30,7 @@ outputs:
       host:
         - python
         - pip
+        - setuptools
         - hdf5
         - numpy
         - cython
@@ -60,6 +61,7 @@ outputs:
       host:
         - python
         - pip
+        - setuptools
         - hdf5
         - numpy
         - cython
