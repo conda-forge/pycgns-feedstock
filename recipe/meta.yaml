@@ -15,8 +15,8 @@ build:
 outputs:
   - name: pycgns-core
     version: {{ version }}
-    script: build.sh  # [not win]
-    script: bld.bat  # [win]
+    script: build_core.sh  # [not win]
+    script: bld_core.bat  # [win]
     build:
       skip_compile_pyc:
         - "CGNS/APP/*.py"
