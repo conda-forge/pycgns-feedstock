@@ -47,7 +47,7 @@ outputs:
         - CGNS.PAT
         - CGNS.VAL
 
-    conflicts :
+    conflicts:
       - pycgns
 
   - name: "pycgns"
@@ -85,7 +85,7 @@ outputs:
         - CGNS.PAT
         - CGNS.VAL
 
-    conflicts :
+    conflicts:
       - pycgns-core
 
 about:
