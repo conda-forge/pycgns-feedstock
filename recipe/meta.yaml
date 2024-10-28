@@ -17,10 +17,6 @@ outputs:
     version: {{ version }}
     script: build_core.sh  # [not win]
     script: bld_core.bat  # [win]
-    build:
-      skip_compile_pyc:
-        - "CGNS/APP/*"
-        - "CGNS/NAV/*"
 
     requirements:
       build:
