@@ -44,6 +44,42 @@ outputs:
         - CGNS.PAT
         - CGNS.VAL
 
+  - name: "pycgns"
+    version: {{ version }}
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+
+      host:
+        - python
+        - pip
+        - setuptools
+        - hdf5
+        - numpy
+        - cython
+        - future
+        - pkgconfig
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+      run:
+        - python
+        - hdf5
+        - future
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+    test:
+      imports:
+        - CGNS.MAP
+        - CGNS.PAT
+        - CGNS.VAL
+
 about:
   home: https://github.com/pyCGNS/pyCGNS
   license: LGPL-2.1-only
