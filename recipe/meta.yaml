@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  file: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
 
 build:
@@ -19,8 +19,8 @@ outputs:
     script: bld_core.bat  # [win]
     build:
       skip_compile_pyc:
-        - "CGNS/APP/*.py"
-        - "CGNS/NAV/*.py"
+        - "CGNS/APP/*"
+        - "CGNS/NAV/*"
 
     requirements:
       build:
