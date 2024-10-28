@@ -1,8 +1,7 @@
-{% set name = "pyCGNS" %}
 {% set version = "6.2.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: pycgns-split
   version: {{ version }}
 
 source:
