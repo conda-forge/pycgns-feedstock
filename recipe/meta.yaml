@@ -46,8 +46,8 @@ outputs:
 
   - name: "pycgns"
     version: {{ version }}
-    script: build.sh  # [not win]
-    script: bld.bat  # [win]
+    script: build_all.sh  # [not win]
+    script: bld_all.bat  # [win]
 
     requirements:
       build:
