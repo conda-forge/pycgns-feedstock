@@ -2,7 +2,7 @@
 {% set version = "6.2.2" %}
 
 package:
-  name: pycgns-split
+  name: {{ name|lower }}-glob
   version: {{ version }}
 
 source:
@@ -13,7 +13,7 @@ build:
   number: 7
 
 outputs:
-  - name: "pycgns-core"
+  - name: {{ name|lower }}-core
     version: {{ version }}
     script: build_core.sh  # [not win]
     script: bld_core.bat  # [win]
@@ -44,9 +44,9 @@ outputs:
         - CGNS.PAT
         - CGNS.VAL
 
-  - name: "pycgns"
+  - name: {{ name|lower }}
     version: {{ version }}
-    script: build_all.sh  # [not win]
+    script: build_all.sh  # [unix]
     script: bld_all.bat  # [win]
 
     requirements:
