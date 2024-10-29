@@ -2,7 +2,7 @@
 {% set version = "6.2.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-glob
   version: {{ version }}
 
 source:
@@ -10,41 +10,78 @@ source:
   sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
 
 build:
-  number: 6
+  number: 7
 
+outputs:
+  - name: {{ name|lower }}-core
+    version: {{ version }}
+    script: build_core.sh  # [not win]
+    script: bld_core.bat  # [win]
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
 
-  host:
-    - python
-    - pip
-    - hdf5
-    - numpy
-    - cython
-    - future
-    - pkgconfig
-    - qt-main         # [win or osx]
-    - qtpy       # [win or osx]
-    - pyqt       # [win or osx]
-    - vtk        # [win or osx]
+      host:
+        - python
+        - pip
+        - setuptools
+        - hdf5
+        - numpy
+        - cython
+        - future
+        - pkgconfig
 
-  run:
-    - python
-    - hdf5
-    - future
-    - qt-main         # [win or osx]
-    - qtpy       # [win or osx]
-    - pyqt       # [win or osx]
-    - vtk        # [win or osx]
+      run:
+        - python
+        - hdf5
+        - future
 
-test:
-  imports:
-    - CGNS.MAP
-    - CGNS.PAT
-    - CGNS.VAL
+    test:
+      imports:
+        - CGNS.MAP
+        - CGNS.PAT
+        - CGNS.VAL
+
+  - name: {{ name|lower }}
+    version: {{ version }}
+    script: build_all.sh  # [unix]
+    script: bld_all.bat  # [win]
+
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ stdlib("c") }}
+
+      host:
+        - python
+        - pip
+        - setuptools
+        - hdf5
+        - numpy
+        - cython
+        - future
+        - pkgconfig
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+      run:
+        - python
+        - hdf5
+        - future
+        - qt-main         # [win or osx]
+        - qtpy       # [win or osx]
+        - pyqt       # [win or osx]
+        - vtk        # [win or osx]
+
+    test:
+      imports:
+        - CGNS.MAP
+        - CGNS.PAT
+        - CGNS.VAL
 
 about:
   home: https://github.com/pyCGNS/pyCGNS
