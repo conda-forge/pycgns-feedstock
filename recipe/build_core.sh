@@ -3,10 +3,10 @@ set -ex
 
 export HDF5_DIR=${PREFIX}
 
-mkdir builddir
+mkdir corebuilddir
 
 python -m build -w -n -x \
-    -Cbuilddir=builddir \
+    -Cbuilddir=corebuilddir \
     -Cinstall-args=--tags=runtime,python-runtime,devel \
     -Csetup-args=-Dapp=false \
     -Csetup-args=-Dnav=false \
