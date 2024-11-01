@@ -1,5 +1,5 @@
 {% set name = "pyCGNS" %}
-{% set version = "6.2.2" %}
+{% set version = "6.3.0" %}
 
 package:
   name: {{ name|lower }}-glob
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
+  sha256: 7f64ba14ec5c8ee1cd7a328e805d7153f7c6513161fa00e9b115740d231200f3
 
 build:
-  number: 7
+  number: 0
 
 outputs:
   - name: {{ name|lower }}-core
@@ -63,19 +63,19 @@ outputs:
         - cython
         - future
         - pkgconfig
-        - qt-main         # [win or osx]
-        - qtpy       # [win or osx]
-        - pyqt       # [win or osx]
-        - vtk        # [win or osx]
+        - qt-main
+        - qtpy
+        - pyside6
+        - vtk
 
       run:
         - python
         - hdf5
         - future
-        - qt-main         # [win or osx]
-        - qtpy       # [win or osx]
-        - pyqt       # [win or osx]
-        - vtk        # [win or osx]
+        - qt-main
+        - qtpy
+        - pyside6
+        - vtk
 
     test:
       imports:
