@@ -1,10 +1,10 @@
 @echo on
 
-mkdir builddir
+mkdir corebuilddir
 
 :: -wnx flags mean: --wheel --no-isolation --skip-dependency-check
 %PYTHON% -m build -w -n -x ^
-    -Cbuilddir=builddir ^
+    -Cbuilddir=corebuilddir ^
     -Csetup-args=-Dapp=false ^
     -Csetup-args=-Dnav=false ^
     -Csetup-args=-Duse-vtk=false
