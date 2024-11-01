@@ -26,17 +26,17 @@ outputs:
       host:
         - python
         - pip
-        - setuptools
+        - build
+        - meson-python
         - hdf5
         - numpy
         - cython
-        - future
         - pkgconfig
 
       run:
         - python
         - hdf5
-        - future
+        - numpy
 
     test:
       imports:
@@ -57,11 +57,11 @@ outputs:
       host:
         - python
         - pip
-        - setuptools
+        - build
+        - meson-python
         - hdf5
         - numpy
         - cython
-        - future
         - pkgconfig
         - qt-main
         - qtpy
@@ -71,7 +71,7 @@ outputs:
       run:
         - python
         - hdf5
-        - future
+        - numpy
         - qt-main
         - qtpy
         - pyside6
