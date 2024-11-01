@@ -6,7 +6,7 @@ export HDF5_DIR=${PREFIX}
 mkdir builddir
 
 python -m build -w -n -x \
-    -Cbuilddir=builddir \-Csetup-args=-Dnav=True -Csetup-args=-Dapp=True -Csetup-args=-Duse-vtk=True
+    -Cbuilddir=builddir \
     -Cinstall-args=--tags=runtime,python-runtime,devel \
     -Csetup-args=-Dapp=false \
     -Csetup-args=-Dnav=false \
