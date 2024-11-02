@@ -20,6 +20,21 @@ build:
   number: 1
   skip: true  # [py<310]
 
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
+  host:
+    - python
+    - cython
+    - meson-python
+    - ninja
+    - pkg-config
+    - python-build
+    - numpy
+    - pip
+    - hdf5
+    
 outputs:
   - name: {{ name|lower }}-core
     version: {{ version }}
