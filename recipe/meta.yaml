@@ -18,6 +18,7 @@ source:
 
 build:
   number: 0
+  skip: true  # [py<310]
 
 outputs:
   - name: {{ name|lower }}-core
