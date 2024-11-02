@@ -34,6 +34,7 @@ requirements:
     - numpy
     - pip
     - hdf5
+    - cmake
     
 outputs:
   - name: {{ name|lower }}-core
@@ -56,6 +57,7 @@ outputs:
         - numpy
         - cython
         - pkg-config
+        - cmake
 
       run:
         - python
@@ -91,6 +93,7 @@ outputs:
         - qtpy
         - pyside6
         - vtk
+        - cmake
 
       run:
         - python
