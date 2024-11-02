@@ -12,7 +12,7 @@ package:
 
 source:
   git_url: https://github.com/pyCGNS/pyCGNS.git
-  git_rev: 98eb64c8551c21f9a06af063d72f15f6a24cd482
+  git_rev: 30f2c2c503155078ee87b9c70d2ddaaff4a47d3d
   #url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
   #sha256: 7f64ba14ec5c8ee1cd7a328e805d7153f7c6513161fa00e9b115740d231200f3
 
