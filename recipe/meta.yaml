@@ -10,7 +10,8 @@ source:
   sha256: 2e82ba90fdbe88cf61d8d67f86290d4fdef344176969aebd0388927583e22d70
 
 build:
-  number: 7
+  number: 8
+  skip: true # [py<310]
 
 outputs:
   - name: {{ name|lower }}-core
