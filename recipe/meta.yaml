@@ -40,6 +40,7 @@ outputs:
         - cython
         - pkgconfig
         - git
+        - git-lfs
 
       run:
         - python
@@ -75,6 +76,8 @@ outputs:
         - qtpy
         - pyside6
         - vtk
+        - git
+        - git-lfs
 
       run:
         - python
