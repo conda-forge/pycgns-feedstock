@@ -34,6 +34,7 @@ requirements:
     - numpy
     - pip
     - hdf5
+    - zlib
     - cmake
     
 outputs:
@@ -54,6 +55,7 @@ outputs:
         - python-build
         - meson-python
         - hdf5
+        - zlib
         - numpy
         - cython
         - pkg-config
@@ -86,6 +88,7 @@ outputs:
         - python-build
         - meson-python
         - hdf5
+        - zlib
         - numpy
         - cython
         - pkg-config
