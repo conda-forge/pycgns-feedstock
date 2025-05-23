@@ -7,21 +7,21 @@ channel_sources:
 channel_targets:
 - conda-forge main
 hdf5:
-- 1.14.4
+- 1.14.3
 numpy:
-- '2.0'
+- '2'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.13.* *_cp313
 qt6_main:
-- '6.7'
+- '6.9'
 target_platform:
 - win-64
 vtk:
-- 9.3.1
+- 9.4.2
 zip_keys:
 - - python
   - numpy
