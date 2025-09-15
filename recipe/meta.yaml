@@ -10,7 +10,7 @@ source:
   sha256: 57333338b893465ca00798491c61c0c123d90c431f148c1e3dda60b87bb1c6b3
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<310]
 
 requirements:
