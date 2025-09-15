@@ -1,0 +1,3 @@
+# GCC 14 is stricter about pointer conversions
+c_compiler_version:     # [linux]
+  - 13                  # [linux]
