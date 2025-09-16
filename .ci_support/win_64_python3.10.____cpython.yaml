@@ -22,5 +22,8 @@ target_platform:
 - win-64
 vtk:
 - 9.5.1
+zip_keys:
+- - python
+  - channel_sources
 zlib:
 - '1'
