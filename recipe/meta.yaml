@@ -1,5 +1,5 @@
 {% set name = "pyCGNS" %}
-{% set version = "6.3.3" %}
+{% set version = "6.3.4" %}
 
 package:
   name: {{ name|lower }}-glob
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 57333338b893465ca00798491c61c0c123d90c431f148c1e3dda60b87bb1c6b3
+  sha256: a3aaf5a4116b38404bb3e1ab25d2e4afd7a73e6d633fa5dcc60bd5ff3fbaf583
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<310]
 
 requirements:
